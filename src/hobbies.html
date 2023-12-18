@@ -4,60 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hobbies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <h2 class="logo">Naol's <span>Portfolio</span></h2>
-        <ul>
-            <li> <a href="home.html" target="_blank">Home</a></li>
-            <li><a href="about.html" target="_blank">About</a></li>
-            <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
-            <li><a href="contact.html" target="_blank">Contact</a></li>
-            <li><a href="cv.html" target="_blank">CV</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="hobby">
+    <div class="columns is-gapless">
+        <div class="column is-one-quarter">
+          <aside>
+            <nav class="panel">
+              <p class="panel-heading">
+                Go to
+              </p>
+              <a class="panel-block" href="#movies">
+                Movies
+              </a>
+              <a class="panel-block" href="#music">
+                Music
+              </a>
+            </nav>
+          </aside>
+        </div>
+    <div class="column">
+      <header class="hero is-bold is-primary">
+        <div class="hero-body"></div>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                 <h2 class="title">Naol's Portfolio</h2>
+                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                 </a>
+                </div>
+                <div class="navbar-menu" id="navbarMenu">
+                 <div class="navbar-end">
+                    <a class="navbar-item" href="home.html">Home</a>
+                    <a class="navbar-item" href="about.html" target="_blank">About</a>
+                    <a class="navbar-item" href="hobbies.html" target="_blank">Hobbies</a>
+                    <a class="navbar-item" href="contact.html" target="_blank">Contact</a>
+                    <a class="navbar-item" href="cv.html" target="_blank">CV</a>
+                 </div>
+                </div>
+              </nav>
+            
+              <script>
+                const navbarBurger = document.querySelector('.navbar-burger');
+                const navbarMenu = document.querySelector('.navbar-menu');
+            
+                navbarBurger.addEventListener('click', () => {
+                 navbarMenu.classList.toggle('is-active');
+                });
+              </script>
+        </header>
+<div class="title">
   <h2 >My <span>Hobbies</span></h2>
 </div>
 <p>During my free time, I engage in various activities. I often find solace in the pages of novels and self-help books, a routine I gravitate towards when not immersed in my studies. Recently, I delved into the captivating narratives of <cite>Atomic Habits</cite> and <cite>To Kill a Mockingbird</cite>, finding them both enriching. My other hobbies are movies and music.</p>
-    <h3 id="movies">Movies</h3>
+<section class="section">   
+  <h3 id="movies" class="title is-3">Movies</h3>
     <p>Watching movies is a cherished pastime for me. It serves as a means to divert my mind and provides entertainment that fuels my inspiration for acquiring new knowledge. Notably, films such as <cite>Pursuit of Happyness</cite>, <cite>Good Will Hunting</cite>, and <cite>Coach Carter</cite> hold a special place as my favorites in the cinematic realm. here is my favorite qoute from <cite>pursuit of happyness</cite></p>
-    <blockquote>"As long as I kept my mental focus on destinations that were ahead, destinations that I had the audacity to dream might hold a red Ferrari of my own, I protected myself from despair. The future was uncertain, absolutely, and there were many hurdles, twists, and turns to come, but as long as I kept moving forward, one foot in front of the other, the voices of fear and shame, the messages from those who wanted me to believe that I wasn't good enough, would be stilled."</blockquote> 
+    <blockquote class="has-text-justified">"As long as I kept my mental focus on destinations that were ahead, destinations that I had the audacity to dream might hold a red Ferrari of my own, I protected myself from despair. The future was uncertain, absolutely, and there were many hurdles, twists, and turns to come, but as long as I kept moving forward, one foot in front of the other, the voices of fear and shame, the messages from those who wanted me to believe that I wasn't good enough, would be stilled."</blockquote> 
     
     <figure>
       <figcaption>My favorite movies</figcaption>
-      <img src="images/mv2.jpg" alt="pursuit of happyness">
-      <img src="images/mv3.jpg" alt="Coach Carter">
-      <img src="images/mv1.jpg" alt="Good will hunting">
-      
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <img src="images/mv2.jpg" alt="pursuit of happyness" class="is-flex-grow-1">
+        </div>
+        <div class="column is-one-third">
+          <img src="images/mv3.jpg" alt="Coach Carter" class="is-flex-grow-1">
+        </div>
+        <div class="column is-one-third">
+          <img src="images/mv1.jpg" alt="Good will hunting" class="is-flex-grow-1">
+        </div>
+      </div>
     </figure>
-    <h3 id="music">Music</h3>
-    <p>Beyond my enjoyment of movies and books, I also allocate time in my leisure for the pleasure of music. Delving into the soundscape is a cherished activity for me, and among my preferred artists are Bruno Mars, Kanye West, J Cole, and Adele, among others. Each artist brings a unique flavor to my playlist, offering a diverse range of musical experiences. Currently, one particular song has captured my attention, becoming a favorite in the present moment.</p>
-    <audio src="images/Homecoming.mp3" controls muted>
-      Your browser does not support the audio tag.
-    </audio>
-    <aside>
-      <nav>
-        <ul>
-          <li><a href="#movies">Movies</a></li>
-          <li><a href="#music">Music</a></li>
-        </ul>
+    
+    
+  </section> 
+  <section class="section">
+    <h3 id="music" class="title is-3">Music</h3>
+       <p>Beyond my enjoyment of movies and books, I also allocate time in my leisure for the pleasure of music. Delving into the soundscape is a cherished activity for me, and among my preferred artists are Bruno Mars, Kanye West, J Cole, and Adele, among others. Each artist brings a unique flavor to my playlist, offering a diverse range of musical experiences. Currently <cite>Homecoming</cite> by Kanye West has captured my attention, becoming a favorite in the present moment.</p>
+       <div class="field">
+         <div class="control">
+           <audio class="audio-element" src="images/Homecoming.mp3" controls muted>
+             Your browser does not support the audio tag.
+           </audio>
+         </div>
+       </div>
+    </section> 
+    
+      <a href="about.html" class="pagination-previous">Previous</a>
+      <a href="contact.html" class="pagination-next">Next</a>
+  
+  </div>
+</div>
+<footer class="footer has-background-grey-darker">
+  <div class="content has-text-centered">
+      <nav class="level">
+          <div class="level-item has-text-centered">
+              <a class="button is-info is-outlined" href="https://x.com/N1sup">Twitter</a>
+          </div>
+          <div class="level-item has-text-centered">
+              <a class="button is-info is-outlined" href="https://linkedin.com/in/naol-gezahegne">LinkedIn</a>
+          </div>
+          <div class="level-item has-text-centered">
+              <a class="button is-info is-outlined" href="mailto:naolgezahegne@gmail.com">Email</a>
+          </div>
       </nav>
-    </aside>
-    <button onclick="window.location.href='about.html'">previous</button>
-<button onclick="window.location.href='contact.html'">Next</button>
-<footer>
-    <nav>
-        <ul>
-            <li><a href="https://x.com/N1sup">twitter</a></li>
-            <li><a href="https://linkedin.com/in/naol-gezahegne">linkedin</a></li>
-            <li><a href="mailto:naolgezahegne@gmail.com">email</a></li>
-        </ul>
-    </nav>
+      <p>&copy; 2023 Naol. All rights reserved.</p>
+  </div>
 </footer>
-<p>&copy; 2023 Naol. All rights reserved.</p>
 
 </body>
 </html>

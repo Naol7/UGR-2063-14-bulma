@@ -4,63 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My CV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h2 class="logo">Naol's <span>Portfolio</span></h2>
-            <ul>
-                <li> <a href="home.html" target="_blank">Home</a></li>
-                <li><a href="about.html" target="_blank">About</a></li>
-                <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-                <li><a href="cv.html" target="_blank">CV</a></li>
-            </ul>
-    </nav>
-</header>
+    <header class="hero is-bold is-primary">
+        <div class="hero-body"></div>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                 <h2 class="title">Naol's Portfolio</h2>
+                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                 </a>
+                </div>
+                <div class="navbar-menu" id="navbarMenu">
+                 <div class="navbar-end">
+                    <a class="navbar-item" href="home.html">Home</a>
+                    <a class="navbar-item" href="about.html" target="_blank">About</a>
+                    <a class="navbar-item" href="hobbies.html" target="_blank">Hobbies</a>
+                    <a class="navbar-item" href="contact.html" target="_blank">Contact</a>
+                    <a class="navbar-item" href="cv.html" target="_blank">CV</a>
+                 </div>
+                </div>
+              </nav>
+            
+              <script>
+                const navbarBurger = document.querySelector('.navbar-burger');
+                const navbarMenu = document.querySelector('.navbar-menu');
+            
+                navbarBurger.addEventListener('click', () => {
+                 navbarMenu.classList.toggle('is-active');
+                });
+              </script>
+    </header>
 <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <div class="personal-info">
-        <h3>Naol Gezahegne</h3>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/naol-gezahegne" target="_blank">My LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/Naol7" target="_blank">My GitHub Profile</a></p>
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-2">Curriculum Vitae</h2>
+            <div class="box">
+                <h3 class="subtitle">Naol Gezahegne</h3>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/naol-gezahegne" target="_blank">My LinkedIn Profile</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/Naol7" target="_blank">My GitHub Profile</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+        <h3 class="title is-3">Education</h3>
+        <div class="box">
+          <p><strong>Addis Ababa Institute of Technology</strong> - Software Engineering - 2027</p>
+        </div>
     </div>
-    <div class="education">
-        <h3>Education</h3>
-        <p><strong>Addis Ababa institute of Technology</strong> - Software Engineering - 2027</p>
-    </div>
-
-    <div class="skills">
-        <h3>Programming languages</h3>
+    </section> 
+<section class="section">
+    <div class="container">
+        <h3 class="title is-3">Programming languages</h3>
+        <div class="box">
         <ul>
             <li>Python</li>
             <li>Java</li>
             <li>SQL</li>
         </ul>
     </div>
-    
-    <div class="Highschool">
-        <h3>Highschool</h3>
-        <p>Burka Harbu Secondary School(2017-2020) </p>
-        <p>My Highschool Transcript</p>
+    </div>
+</section>
+    <section class="section">
+        <div class="container">
+        <h3 class="title is-3">Highschool</h3>
+        <div class="box">
+        <p class="is-4">Burka Harbu Secondary School(2017-2020) </p>
+        <p class="is-4">My Highschool Transcript</p>
         <iframe src="images/Transcript.pdf" allowfullscreen></iframe>
-
-
+    </div>
     </div>   
 </section>
-<button onclick="window.location.href='contact.html'">Previous</button>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="https://x.com/N1sup">twitter</a></li>
-                <li><a href="https://linkedin.com/in/naol-gezahegne">linkedin</a></li>
-                <li><a href="mailto:naolgezahegne@gmail.com">email</a></li>
-            </ul>
+    <a href="contact.html" class="pagination-previous button is-primary is-small">Previous</a>
+
+<footer class="footer has-background-grey-darker">
+    <div class="content has-text-centered">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <a class="button is-info is-outlined" href="https://x.com/N1sup">Twitter</a>
+            </div>
+            <div class="level-item has-text-centered">
+                <a class="button is-info is-outlined" href="https://linkedin.com/in/naol-gezahegne">LinkedIn</a>
+            </div>
+            <div class="level-item has-text-centered">
+                <a class="button is-info is-outlined" href="mailto:naolgezahegne@gmail.com">Email</a>
+            </div>
         </nav>
         <p>&copy; 2023 Naol. All rights reserved.</p>
-    </footer>
-     
+    </div>
+  </footer>
 
     
 </body>

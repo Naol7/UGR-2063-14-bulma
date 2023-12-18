@@ -4,59 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <nav>
-            <h2 class="logo">Naol's <span>Portfolio</span></h2>
-            <ul>
-                <li> <a href="home.html" target="_blank">Home</a></li>
-                <li><a href="about.html" target="_blank">About</a></li>
-                <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-                <li><a href="cv.html" target="_blank">CV</a></li>
-            </ul>
-    </nav>
-</header>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me using the form below or through the provided contact information.</p>
-
-        <form action="process_form.php" method="post">
-            <label for="name" >Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    <section id="contact-info">
-        <h2>Contact Information</h2>
-        <p>You can also reach me through the following channels:</p>
-        <p>Email: <a href="mailto:naolgezahegne@gmail.com">Email</a></p>
-        <p>Twitter: <a href="https://x.com/N1sup" target="_blank">Twitter</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank">LinkedIn</a></p>
-    </section>
-    <figure>
-        <img src="images/prof.jpg" alt="my twitter profile">
-    </figure>
-<button onclick="window.location.href='hobbies.html'">previous</button>
-<button onclick="window.location.href='cv.html'">Next</button>
-<footer>
-    <nav>
-        <ul>
-            <li><a href="https://x.com/N1sup">my twitter</a></li>
-            <li><a href="https://linkedin.com/in/naol-gezahegne">my linkedin</a></li>
-            <li><a href="mailto:naolgezahegne@gmail.com">email me</a></li>
-        </ul>
-    </nav>
-    <p>&copy; 2023 Naol. All rights reserved.</p>
-</footer>
+    <header class="hero is-bold is-primary">
+        <div class="hero-body"></div>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                 <h2 class="title">Naol's Portfolio</h2>
+                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                 </a>
+                </div>
+                <div class="navbar-menu" id="navbarMenu">
+                 <div class="navbar-end">
+                    <a class="navbar-item" href="home.html">Home</a>
+                    <a class="navbar-item" href="about.html" target="_blank">About</a>
+                    <a class="navbar-item" href="hobbies.html" target="_blank">Hobbies</a>
+                    <a class="navbar-item" href="contact.html" target="_blank">Contact</a>
+                    <a class="navbar-item" href="cv.html" target="_blank">CV</a>
+                 </div>
+                </div>
+              </nav>
+            
+              <script>
+                const navbarBurger = document.querySelector('.navbar-burger');
+                const navbarMenu = document.querySelector('.navbar-menu');
+            
+                navbarBurger.addEventListener('click', () => {
+                 navbarMenu.classList.toggle('is-active');
+                });
+              </script>
+    </header>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="title is-2">Contact Me</h2>
+            <p>Feel free to reach out to me using the form below or through the provided contact information.</p>
     
+            <form id="contactForm" action="process_form.php" method="post">
+                <div class="field">
+                    <label for="name" class="label">Your Name:</label>
+                    <div class="control">
+                        <input class="input" type="text" id="name" name="name" required>
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <label for="email" class="label">Your Email:</label>
+                    <div class="control">
+                        <input class="input" type="email" id="email" name="email" required>
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <label for="message" class="label">Your Message:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <div class="control">
+                    <button class="button is-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="contact-info" class="section">
+        <h2 class="title is-2">Contact Information</h2>
+        <p>You can also reach me through the following channels:</p>
+        <p>Email: <a href="mailto:naolgezahegne@gmail.com">Email Me</a></p>
+        <p>Twitter: <a href="https://x.com/N1sup" target="_blank">My Twitter</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank">My LinkedIn</a></p>
+    </section>
+    <figure class="image is-rounded is-1by1">
+        <img src="images/prof.jpg" alt="my twitter profile" class="is-profile-image">
+      </figure>
+      
+
+        <a href="hobbies.html" class="pagination-previous">Previous</a>
+        <a href="cv.html" class="pagination-next">Next</a>
+    <footer class="footer has-background-grey-darker">
+        <div class="content has-text-centered">
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                    <a class="button is-info is-outlined" href="https://x.com/N1sup">Twitter</a>
+                </div>
+                <div class="level-item has-text-centered">
+                    <a class="button is-info is-outlined" href="https://linkedin.com/in/naol-gezahegne">LinkedIn</a>
+                </div>
+                <div class="level-item has-text-centered">
+                    <a class="button is-info is-outlined" href="mailto:naolgezahegne@gmail.com">Email</a>
+                </div>
+            </nav>
+            <p>&copy; 2023 Naol. All rights reserved.</p>
+        </div>
+      </footer>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
+      
 </body>
 </html>
